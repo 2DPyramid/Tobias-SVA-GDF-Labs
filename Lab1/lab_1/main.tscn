@@ -2,12 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://b6go43drfawe3" path="res://kitty.png" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://b3wkfydsp2uft" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://4ecgbqfdno42" path="res://tree.tscn" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=1068450316]
 
 [node name="Kitty" type="Sprite2D" parent="." unique_id=1321220465]
-position = Vector2(301, 401)
-scale = Vector2(0.9599754, 0.9599754)
+position = Vector2(237.00002, 492)
+scale = Vector2(0.5982143, 0.5982143)
 texture = ExtResource("1_0xm2m")
 
 [node name="Kitty2" type="Sprite2D" parent="Kitty" unique_id=65655703]
@@ -16,12 +17,52 @@ scale = Vector2(0.41778657, 0.41778654)
 texture = ExtResource("1_0xm2m")
 
 [node name="robot" type="Sprite2D" parent="." unique_id=108436226]
-position = Vector2(801.1251, 275.1249)
-scale = Vector2(1.8457042, 1.8457042)
+position = Vector2(476, 429)
+scale = Vector2(0.85254, 0.85254)
 texture = ExtResource("2_h2yge")
 
 [node name="evil robot" type="Sprite2D" parent="robot" unique_id=608008476]
 modulate = Color(0.71432495, 0, 0.17337826, 1)
-position = Vector2(113.91001, -1.1906977)
+position = Vector2(178.79352, 98.60735)
 scale = Vector2(0.81067044, 0.7780625)
 texture = ExtResource("2_h2yge")
+
+[node name="tree" parent="." unique_id=898771239 instance=ExtResource("3_h2yge")]
+offset_left = 72.0
+offset_top = -33.0
+offset_right = 535.0
+offset_bottom = 158.0
+
+[node name="trunk" parent="tree" index="0" unique_id=1938685406]
+color = Color(0.5019608, 0.25882354, 0.36862746, 1)
+
+[node name="tree2" parent="." unique_id=1555513845 instance=ExtResource("3_h2yge")]
+offset_left = 537.0
+offset_top = -37.0
+offset_right = 1000.0
+offset_bottom = 154.0
+color = Color(0.716786, 0.733199, 0.5643836, 1)
+
+[node name="tree3" parent="." unique_id=698358088 instance=ExtResource("3_h2yge")]
+offset_left = 905.0
+offset_top = 147.0
+offset_right = 1368.0
+offset_bottom = 338.0
+color = Color(0.6901961, 0.84705883, 0.2509804, 1)
+
+[node name="tree4" parent="." unique_id=1323651165 instance=ExtResource("3_h2yge")]
+offset_left = 710.0
+offset_top = 32.0
+offset_right = 1173.0
+offset_bottom = 223.0
+color = Color(0.65682083, 0.7705895, 0.34293324, 1)
+
+[node name="tree5" parent="." unique_id=645348888 instance=ExtResource("3_h2yge")]
+offset_left = -143.0
+offset_top = 86.0
+offset_right = 320.0
+offset_bottom = 277.0
+color = Color(0.29803923, 0.84705883, 0.6117647, 1)
+
+[editable path="tree"]
+[editable path="tree2"]
