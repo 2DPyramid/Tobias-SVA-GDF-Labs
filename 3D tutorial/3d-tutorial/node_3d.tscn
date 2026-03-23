@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://copmn6125x352"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xowi"]
+sky_top_color = Color(0, 0.459738, 0.781923, 1)
+sky_horizon_color = Color(0.515155, 0.6165, 0.705144, 1)
+ground_bottom_color = Color(0.210341, 0.155985, 0.188374, 1)
+ground_horizon_color = Color(0.515155, 0.6165, 0.705144, 1)
+energy_multiplier = 3.35
+
+[sub_resource type="Sky" id="Sky_a202f"]
+sky_material = SubResource("ProceduralSkyMaterial_4xowi")
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+sky = SubResource("Sky_a202f")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a0tk4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_noarx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.594823, -0.150628, 0.789618, 0, 0.982287, 0.187381, -0.803857, -0.111459, 0.584287, 0, 0, 0)
+light_color = Color(0.996078, 0.827451, 0.54902, 1)
+light_energy = 3.5
+shadow_enabled = true
+directional_shadow_max_distance = 677.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_a0tk4")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.227414, 0.384001, -0.894889, -0.619539, 0.651946, 0.437194, 0.751302, 0.653842, 0.0896416, -2.54319, 1.74273, 0)
+fov = 45.5877
